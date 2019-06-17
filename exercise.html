@@ -1,0 +1,79 @@
+<html>
+
+<head>
+
+    <script>
+    
+   
+    </script>
+
+</head>
+
+<body>
+
+<script>
+    const arrayMonth = [
+            {shortName:"Jan", longName:"January"},
+            {shortName:"Feb", longName:"February"},
+            {shortName:"Mar", longName:"March"},
+            {shortName:"Apr", longName:"April"},
+            {shortName:"May", longName:"May"},
+            {shortName:"Jun", longName:"June"},
+            {shortName:"Jul", longName:"July"},
+            {shortName:"Aug", longName:"August"},
+            {shortName:"Sep", longName:"September"},
+            {shortName:"Oct", longName:"Octuber"},
+            {shortName:"Nov", longName:"November"},
+            {shortName:"Dec", longName:"December"},
+        ];
+
+        const arrayDayOfWeek = [
+            {shortName:"Mon",longName:"Monday"},
+            {shortName:"Tue",longName:"Tuesday",},
+            {shortName:"Wed",longName:"Wednesday"},
+            {shortName:"Thu",longName:"Thursday"},
+            {shortName:"Fri",longName:"Friday"},
+            {shortName:"Sat",longName:"Saturday"},
+            {shortName:"Sun",longName:"Sunday"}
+            ];
+
+const date = new Date();
+
+// console.log(` ${arrayDayOfWeek[date.getDay()]}, ${date.getDate()} ${arrayMonth[date.getMonth()].shortName}, ${date.getFullYear()}`);
+// console.log(` ${arrayDayOfWeek[date.getDay() - 1]}, ${date.getDate()} ${arrayMonth[date.getMonth()].shortName}`);
+
+
+// EXERCISE
+console.log(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`);
+console.log(`${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`);
+console.log(`${date.getDate()} ${arrayMonth[date.getMonth()].shortName}, ${date.getFullYear()}`);
+console.log(`${date.getDate()} ${arrayMonth[date.getMonth()].shortName}, ${arrayDayOfWeek[date.getDay() - 1].shortName}`);
+console.log(`${arrayDayOfWeek[date.getDay() - 1].longName},  ${date.getDate()} ${arrayMonth[date.getMonth() + 1].longName}, ${date.getFullYear()}`);
+
+
+// Time
+
+console.log(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}:${date.getMilliseconds()}`);
+
+
+const today = new Date(2019,5,23,20);
+console.log(today);
+today.setMinutes(59);
+today.setHours(22);
+today.setDate(15);
+console.log(today);
+
+// Adding and Substracting dates
+
+const today2 = new Date(2019,1,28);
+const tempDate = new Date(today2)
+const threeDaysLater = tempDate.setDate(tempDate.getDate() + 3) 
+//console.log(tempDate)
+console.log(threeDaysLater);
+
+
+</script>
+
+</body>
+
+</html>
