@@ -1,0 +1,27 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<script>
+const a = new Date(2019, 0, 26)
+const b = new Date(2019, 0, 26)
+
+// Note: two compare dates you have to use this method below because comparing object A equal object B will not work A===B cause you cannot
+// compare two objects like that.
+
+if( a.getFullYear()=== b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate())
+{
+    console.log("Both days are equal");
+}
+else
+{
+    console.log("Both days are not equal");
+}
+</script>    
+</body>
+
+</html>

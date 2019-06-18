@@ -44,24 +44,24 @@ const date = new Date();
 
 
 // EXERCISE
-console.log(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`);
-console.log(`${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`);
-console.log(`${date.getDate()} ${arrayMonth[date.getMonth()].shortName}, ${date.getFullYear()}`);
-console.log(`${date.getDate()} ${arrayMonth[date.getMonth()].shortName}, ${arrayDayOfWeek[date.getDay() - 1].shortName}`);
-console.log(`${arrayDayOfWeek[date.getDay() - 1].longName},  ${date.getDate()} ${arrayMonth[date.getMonth() + 1].longName}, ${date.getFullYear()}`);
+// console.log(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`);
+// console.log(`${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`);
+// console.log(`${date.getDate()} ${arrayMonth[date.getMonth()].shortName}, ${date.getFullYear()}`);
+// console.log(`${date.getDate()} ${arrayMonth[date.getMonth()].shortName}, ${arrayDayOfWeek[date.getDay() - 1].shortName}`);
+// console.log(`${arrayDayOfWeek[date.getDay() - 1].longName},  ${date.getDate()} ${arrayMonth[date.getMonth() + 1].longName}, ${date.getFullYear()}`);
 
 
 // Time
 
-console.log(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}:${date.getMilliseconds()}`);
+// console.log(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}:${date.getMilliseconds()}`);
 
 
 const today = new Date(2019,5,23,20);
-console.log(today);
+// console.log(today);
 today.setMinutes(59);
 today.setHours(22);
 today.setDate(15);
-console.log(today);
+// console.log(today);
 
 // Adding and Substracting dates
 
@@ -69,7 +69,41 @@ const today2 = new Date(2019,1,28);
 const tempDate = new Date(today2)
 const threeDaysLater = tempDate.setDate(tempDate.getDate() + 3) 
 //console.log(tempDate)
-console.log(threeDaysLater);
+// console.log(threeDaysLater);
+
+
+//EXERCISE 2.0
+
+// 1- Add 20 days to 28 June 2019 with the timestamp method
+const date3 = new Date(2019,5,28);
+const timeStampOneDay =  86400000;
+const twentyDaysLater = new Date(date3.getTime() + timeStampOneDay * 20);
+console.log(date3); 
+console.log(twentyDaysLater);
+
+//2 - Subtract 30 days from 28 June 2019 with the timestamp method
+
+ const theryDaysEarlier = new Date(date3.getTime() -  timeStampOneDay * 30)   
+ console.log(theryDaysEarlier);   
+
+ // 3 - Add 20 days to 28 June 2019 by creating a new date with arguments.
+  const year = date3.getFullYear();
+  const month = date3.getMonth();
+  const day = date3.getDate();
+  const twentyDaysLater2 = new Date(year,month,day + 20);
+  console.log(twentyDaysLater2);
+
+  // 4 - Subtract 30 days from 28 June 2019 by creating a new date with arguments.
+
+const theryDaysEarlier2 = new Date(year,month,day - 30);
+console.log(theryDaysEarlier2);
+
+
+    
+
+
+
+
 
 
 </script>
